@@ -32,10 +32,11 @@ cd baby-tools-shop
 # Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate  
-
+```
 > [!IMPORTANT]
 > On Windows: `venv\Scripts\activate`
 
+```bash
 # Install dependencies
 pip install -r requirements.txt
 
