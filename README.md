@@ -1,5 +1,7 @@
 # E-Commerce Project For Baby Tools
 
+This is a Django-based e-commerce application for baby tools and products. The project demonstrates a complete e-commerce system with user authentication, product catalog management, and category filtering.
+
 ## Table of Contents
 
 - [About](#about)
@@ -8,52 +10,26 @@
 - [Technologies](#technologies)
 - [Screenshots](#screenshots)
 
-## About
-
-This is a Django-based e-commerce application for baby tools and products. The project demonstrates a complete e-commerce system with user authentication, product catalog management, and category filtering.
-
-
 ## Quickstart
 
 ### Prerequisites
 
 - Python 3.9 or higher
 - Docker (optional, for containerized deployment)
-- pip (Python package manager)
 
 ### Quick Start Guide
 
-**Option 1: Local Development**
+**Docker**
 
 ```bash
-# Clone the repository
+# Copy the source code via SSH
+git clone git@github.com:username/baby-tools-shop.git
 cd baby-tools-shop
 
-# Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate  
-```
-> [!IMPORTANT]
-> On Windows: `venv\Scripts\activate`
+# Create .env file from .example.env
+cp .example.env .env
+# Edit .env with your configuration
 
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run migrations
-cd babyshop_app
-python manage.py makemigrations
-python manage.py migrate
-
-# Start the development server
-python manage.py runserver
-```
-
-Visit `http://localhost:8000` in your browser.
-
-**Option 2: Docker**
-
-```bash
 # Build the Docker image
 docker build -t baby_tools_app -f Dockerfile .
 
@@ -61,7 +37,7 @@ docker build -t baby_tools_app -f Dockerfile .
 docker run -it --rm -p 8025:8025 baby_tools_app
 ```
 
-Visit `http://localhost:8025` in your browser.
+Visit `http://<your_ip>:8025` in your browser.
 
 ## Usage
 
