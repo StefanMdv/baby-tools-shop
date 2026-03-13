@@ -34,7 +34,7 @@ cp .example.env .env
 docker build -t baby_tools_app -f Dockerfile .
 
 # Run the container
-docker run -it --rm -p 8025:8025 baby_tools_app
+docker run -it --rm --env-file .env -p 8025:8025 baby_tools_app
 ```
 
 Visit `http://<your_ip>:8025` in your browser.

@@ -2,9 +2,11 @@ FROM python:3.9-alpine
 
 WORKDIR /babyshop_app
 
-COPY babyshop_app/ requirements.txt .env ./
+COPY babyshop_app/ requirements.txt ./
 
 RUN pip install --upgrade pip && python -m pip install -r requirements.txt
+
+RUN python manage.py migrate
 
 EXPOSE 8025
 
